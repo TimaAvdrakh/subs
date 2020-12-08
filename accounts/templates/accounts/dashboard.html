@@ -1,0 +1,46 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+{%  include 'accounts/status.html' %}
+
+<br>
+
+<div class="row">
+
+
+	<div class="col-md">
+		<h5>LAST 5 ORDERS</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Sub</th>
+					<th>Date Order</th>
+{#					<th>Status</th>#}
+					<th>Price</th>
+{#					<th>Remove</th>#}
+				</tr>
+
+				{% for order in next %}
+					<tr>
+						<td>{{order.name}}</td>
+						<td>{{order.day}} {{ month }}</td>
+						<td>{{order.price}} $</td>
+{#						<td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>#}
+
+{#						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>#}
+
+					</tr>
+				{% endfor %}
+
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+

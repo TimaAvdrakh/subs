@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/home/tima/Desktop/uni/3 Kurs/1 Semester/web/crm1_v17_image_upload/venv/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from distro import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
